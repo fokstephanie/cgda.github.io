@@ -6,7 +6,8 @@
 
 a, p {
     color: #333;
-    font-family: "Arial"
+    font-family: 'Mada', sans-serif;
+    font-weight: 200;
 }
 
 ul#navbar {
@@ -51,9 +52,10 @@ div#splash-name {
 }
 
 div#splash-name h1 {
+    font-family: 'Mada', sans-serif;
+    /*font-family: 'Noticia Text', serif;*/
     font-size: 36pt;
-    font-family: "Arial";
-    font-weight: lighter;
+    font-weight: 200;
     color: #333;
     margin-bottom:0px;
 }
