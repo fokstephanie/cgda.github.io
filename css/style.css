@@ -47,6 +47,11 @@ li#logo-nav-item a {
     text-decoration: none;
 }
 
+div#splash {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 div#splash-name {
     width: 500px;
 }
