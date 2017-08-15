@@ -10,7 +10,7 @@ function init() {
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0xffffff );
 
-    initCube();
+    initMesh();
     initCamera();
     initRenderer();
 
@@ -28,20 +28,23 @@ function initRenderer() {
     renderer.setSize(WIDTH, HEIGHT);
 }
 
-function initCube() {
-    cube = new THREE.Mesh(new THREE.CubeGeometry(3, 3, 3), new THREE.MeshNormalMaterial());
-    scene.add(cube);
+function initMesh() {
+    mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(2.5, 0), new THREE.MeshBasicMaterial({
+    	color: 0xff8800,
+    	wireframe: true
+    }));
+    scene.add(mesh);
 }
 
-function rotateCube() {
-    cube.rotation.x -= SPEED * 2;
-    cube.rotation.y -= SPEED;
-    cube.rotation.z -= SPEED * 3;
+function rotateMesh() {
+    mesh.rotation.x -= SPEED;
+    mesh.rotation.y -= SPEED * 2;
+    mesh.rotation.z -= SPEED * 3;
 }
 
 function render() {
     requestAnimationFrame(render);
-    rotateCube();
+    rotateMesh();
     renderer.render(scene, camera);
 }
 
