@@ -14,7 +14,7 @@ function init() {
     initCamera();
     initRenderer();
 
-    $("#splash").append(renderer.domElement);
+    document.getElementById("splash").appendChild(renderer.domElement);(renderer.domElement);
 }
 
 function initCamera() {
